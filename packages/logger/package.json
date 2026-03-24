@@ -1,0 +1,26 @@
+{
+  "name": "@paystay/logger",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node ../../scripts/fix-esm-specifiers.mjs dist",
+    "check-types": "tsc -p tsconfig.json --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@logtail/node": "^0.5.8",
+    "@logtail/winston": "^0.5.8",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.15",
+    "typescript": "^5.9.2"
+  }
+}
